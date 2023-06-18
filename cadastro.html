@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Cadastro de Capivarinha</title>
   <link href="style_cadastro.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
 </head>
 
 <body id="body_display">
@@ -21,73 +22,72 @@
         <a href="display.html">Display</a>
       </li>
       <li>
-        <a href="">Erebus</a>
+        <a href="" >Alerta</a>
       </li>
     </ul>
   </nav>
   <div id="div_form">
     <div id="div_formulario_cadastro_generico">
       <h1 id="h1_titulo_cadastro">Cadastro de Professor</h1>
+
       <form>
         <label id="label_cadastro" for="nome">Nome do Professor:</label>
         <br />
-        <input id="input_formulario" type="text" id="nome" name="nome_professor"
+        <input class="input_generico_cadastro" type="text" id="id_nome_professor" name="nome_professor"
           placeholder="Preencha o Nome do Professor" autocomplete="off" required />
-
         <br />
 
         <label id="label_cadastro" for="email">E-mail do Professor:</label>
         <br />
-        <input id="input_formulario" type="email" id="email" name="email_professor"
+        <input class="input_generico_cadastro" id="email_professor" type="email" id="email" name="email_professor"
           placeholder="Preencha o E-Mail do Professor" required />
         <br />
 
         <label id="label_cadastro" for="idade">Idade do Professor:</label>
         <br />
-        <input id="input_formulario" type="number" id="idade" name="idade_professor"
+        <input class="input_generico_cadastro" id="idade_professor" type="number" id="idade" name="idade_professor"
           placeholder="Preencha a Idade do Professor" required />
         <br />
 
         <label id="label_cadastro" for="senha">Senha do Professor:</label>
         <br />
-        <input id="input_formulario" type="password" id="senha" name="senha" maxlength="10"
+        <input class="input_generico_cadastro" id="senha_professor" type="password" id="senha" name="senha" maxlength="10"
           placeholder="Preencha a Senha do Professor" autocomplete="off" required />
         <br />
         <br />
 
-        <input id="submit_cadastro" onclick="javascript:alert('Boa Noite!')" type="submit" value="Cadastrar" />
+        <input class="submit_cadastro" id="submit_cadastro" onclick="comparador(event)" type="submit" value="Cadastrar" />
       </form>
     </div>
     <div id="div_formulario_cadastro_generico">
       <h1 id="h1_titulo_cadastro">Cadastro de Aluno</h1>
       <form>
         <label id="label_cadastro" for="nome_estudante">Nome do Estudante:</label>
-        <!--Copiei do professor -->
         <br />
-        <input id="input_formulario" type="text" id="input_nome_estudante" name="nome_estudante"
+        <input class="input_generico_cadastro" id="nome_estudante" type="text" id="input_nome_estudante" name="nome_estudante"
           placeholder="Preencha o Nome do Estudante" required />
         <br />
 
         <label id="label_cadastro" for="email">E-mail do Estudante:</label>
         <br />
-        <input id="input_formulario" type="email" id="email" name="email_estudante"
+        <input class="input_generico_cadastro" id="email_estudante" type="email" id="email" name="email_estudante"
           placeholder="Preencha o E-Mail do Estudante" required />
         <br />
 
         <label id="label_cadastro" for="idade">Idade do Estudante:</label>
         <br />
-        <input id="input_formulario" type="number" id="idade" name="idade_estudante"
+        <input class="input_generico_cadastro" id="idade_estudante" type="number" id="idade" name="idade_estudante"
           placeholder="Preencha a Idade do Estudante" required />
         <br />
 
         <label id="label_cadastro" for="senha">Senha do Estudante:</label>
         <br />
-        <input id="input_formulario" type="password" id="senha" name="senha" maxlength="10"
+        <input class="input_generico_cadastro" id="senha_estudante" type="password" id="senha" name="senha" maxlength="10"
           placeholder="Preencha a Senha do Estudante" autocomplete="off" required />
         <br />
         <br />
 
-        <input id="submit_cadastro" onclick="javascript:alert('Boa Noite!')" type="submit" value="Cadastrar" />
+        <input class="submit_cadastro" id="submit_cadastro_estudante" type="submit" onclick="mostrarUmNoConsole()" value="Cadastrar" />
       </form>
     </div>
   </div>

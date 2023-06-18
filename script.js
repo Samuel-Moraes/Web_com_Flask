@@ -1,8 +1,14 @@
-function logSubmit(event) {
-  log.textContent = `Formulário Submetido! Time stamp: ${event.timeStamp}`;
-  event.preventDefault();
+function mostrarUmNoConsole() {
+  console.log('Samuel Moraes')
+  alert('Error')
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+function comparador(event){
+  event.preventDefault();
+  var nome = document.getElementById('id_nome_professor').value;
+  if(nome === 'a'){
+    alert('a')
+  }
+
+  
+}
