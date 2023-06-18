@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Cadastro de Capivarinha</title>
+  <link href="style_cadastro.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="body_display">
+  <nav id="barra_menu">
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="cadastro.html">Cadastro</a>
+      </li>
+      <li>
+        <a href="display.html">Display</a>
+      </li>
+      <li>
+        <a href="">Erebus</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="div_form">
+    <div id="div_formulario_cadastro_generico">
+      <h1 id="h1_titulo_cadastro">Cadastro de Professor</h1>
+      <form>
+        <label id="label_cadastro" for="nome">Nome do Professor:</label>
+        <br />
+        <input id="input_formulario" type="text" id="nome" name="nome_professor"
+          placeholder="Preencha o Nome do Professor" autocomplete="off" required />
+
+        <br />
+
+        <label id="label_cadastro" for="email">E-mail do Professor:</label>
+        <br />
+        <input id="input_formulario" type="email" id="email" name="email_professor"
+          placeholder="Preencha o E-Mail do Professor" required />
+        <br />
+
+        <label id="label_cadastro" for="idade">Idade do Professor:</label>
+        <br />
+        <input id="input_formulario" type="number" id="idade" name="idade_professor"
+          placeholder="Preencha a Idade do Professor" required />
+        <br />
+
+        <label id="label_cadastro" for="senha">Senha do Professor:</label>
+        <br />
+        <input id="input_formulario" type="password" id="senha" name="senha" maxlength="10"
+          placeholder="Preencha a Senha do Professor" autocomplete="off" required />
+        <br />
+        <br />
+
+        <input id="submit_cadastro" onclick="javascript:alert('Boa Noite!')" type="submit" value="Cadastrar" />
+      </form>
+    </div>
+    <div id="div_formulario_cadastro_generico">
+      <h1 id="h1_titulo_cadastro">Cadastro de Aluno</h1>
+      <form>
+        <label id="label_cadastro" for="nome_estudante">Nome do Estudante:</label>
+        <!--Copiei do professor -->
+        <br />
+        <input id="input_formulario" type="text" id="input_nome_estudante" name="nome_estudante"
+          placeholder="Preencha o Nome do Estudante" required />
+        <br />
+
+        <label id="label_cadastro" for="email">E-mail do Estudante:</label>
+        <br />
+        <input id="input_formulario" type="email" id="email" name="email_estudante"
+          placeholder="Preencha o E-Mail do Estudante" required />
+        <br />
+
+        <label id="label_cadastro" for="idade">Idade do Estudante:</label>
+        <br />
+        <input id="input_formulario" type="number" id="idade" name="idade_estudante"
+          placeholder="Preencha a Idade do Estudante" required />
+        <br />
+
+        <label id="label_cadastro" for="senha">Senha do Estudante:</label>
+        <br />
+        <input id="input_formulario" type="password" id="senha" name="senha" maxlength="10"
+          placeholder="Preencha a Senha do Estudante" autocomplete="off" required />
+        <br />
+        <br />
+
+        <input id="submit_cadastro" onclick="javascript:alert('Boa Noite!')" type="submit" value="Cadastrar" />
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
+<!--
+input
+  É a criação de um campo para ser inserido algo, onde a tag *type=""* identifica o tipo do campo.
+    
+    type: 
+      Identifica o tipo do campo, de acordo com o seu tipo será seu comportamento.
+        text(Texto) | email(E-mail) | password(Senha) | submit(Botão de enviar).
+        Documentação com todos os atributos destinados ao type(https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input)
+    
+    name: 
+      É como o valor será identificado no submit.
+    
+    placeholder: 
+      É o que aparecerá no campo em quanto não receber valor.
+    
+    required: 
+      É o tom de obrigatoriedade do campo no envio do formulário (É a validação mais simples presente no HTML)
+    
+    maxlenght: 
+      É a quantidade maxima de caracteres que o campo pode comportar
+    
+    autocomplete:
+      É a sugestão que aparece em baixo do campo quando é informado ou não algum dado, por padrão vem ativado.
+    
+    for:
+      O atributo for dentro da tab <label> é usado para referenciar(Criar um laço) entre a label e o campo de input(Ou qualquer outro elemento de input)
+-->
+
+<!--
+label:
+  É a marcação do titulo de uma caixa de formulário, é necessária para que certas aplicações consigam identificar um formulário
+  -->
+
+<!--
+form:
+  É a clausulo criativa de um formulário, é utilizada para marcar o inicio e o fim de um forumlário
+  -->
