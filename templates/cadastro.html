@@ -5,8 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Cadastro de Capivarinha</title>
-  <link href="style_cadastro.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_cadastro.css') }}" type="text/css" />
 </head>
 
 <body id="body_display">
@@ -31,7 +30,7 @@
       <h1 id="h1_titulo_cadastro">Cadastro de Professor</h1>
 
       <form>
-        <label id="label_cadastro" for="nome">Nome do Professor:</label>
+        <label id="label_cadastro" for="nome_professor">Nome do Professor:</label>
         <br />
         <input class="input_generico_cadastro" type="text" id="id_nome_professor" name="nome_professor"
           placeholder="Preencha o Nome do Professor" autocomplete="off" required />
@@ -56,7 +55,7 @@
         <br />
         <br />
 
-        <input class="submit_cadastro" id="submit_cadastro" onclick="comparador(event)" type="submit" value="Cadastrar" />
+        <input class="submit_cadastro" id="submit_cadastro" type="submit" value="Cadastrar" />
       </form>
     </div>
     <div id="div_formulario_cadastro_generico">
@@ -87,7 +86,7 @@
         <br />
         <br />
 
-        <input class="submit_cadastro" id="submit_cadastro_estudante" type="submit" onclick="mostrarUmNoConsole()" value="Cadastrar" />
+        <input class="submit_cadastro" id="submit_cadastro_estudante" type="submit"  value="Cadastrar" />
       </form>
     </div>
   </div>
