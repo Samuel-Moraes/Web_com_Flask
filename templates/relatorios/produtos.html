@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='generic.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='relatorios.css') }}">
+</head>
+<body>
+<div class="sidebar">
+    <h2>Leaf Soft</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li class="has-submenu">
+            <a href="#">Cadastro</a>
+            <ul class="submenu">
+                <li><a href="/cadastro/produto">Produto</a></li>
+                <li><a href="/cadastro/cadastroPessoa">Cadastro</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Relatórios</a>
+            <ul class="submenu">
+                <li><a href="/relatorios/produtos">Produto</a></li>
+            </ul>
+    </ul>
+</div>
+    <div class="content">
+        <div class="form-box tabela-box">
+    <h1>Lista de Produtos</h1>
+
+    <!-- Caixa de filtros -->
+<div class="filtro-box">
+    <form method="post">
+        <div class="filtro-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="filtro-group">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria">
+                <option value="">Todas</option>
+                <option value="alimento">Alimento</option>
+                <option value="bebida">Bebida</option>
+                <option value="higiene">Higiene</option>
+                <option value="outros">Outros</option>
+            </select>
+        </div>
+
+        <div class="filtro-group">
+            <label for="cfop">CFOP:</label>
+            <input type="text" id="cfop" name="cfop">
+        </div>
+
+        <button type="submit">Filtrar</button>
+    </form>
+</div>
+
+
+    <!-- Caixa da tabela -->
+    <div class="tabela-container">
+        <div class="tabela-scroll">
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Preço Venda</th>
+                        <th>Preço Custo</th>
+                        <th>PIS/COFINS</th>
+                        <th>CFOP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for produto in produtos %}
+                    <tr>
+                        <td>{{ produto.nome }}</td>
+                        <td>{{ produto.categoria }}</td>
+                        <td>{{ produto.preco_venda }}</td>
+                        <td>{{ produto.preco_custo }}</td>
+                        <td>{{ produto.pis_cofins }}</td>
+                        <td>{{ produto.cfop }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>

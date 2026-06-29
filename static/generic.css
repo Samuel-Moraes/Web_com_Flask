@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex; /* Sidebar + conteúdo lado a lado */
+    background-color: #f8f9fa;
+}
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #dadce0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    color: #202124;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #202124;
+    font-size: 16px;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+/* Submenu escondido por padrão */
+.submenu {
+    display: none;
+    margin-top: 5px;
+}
+
+.submenu li a {
+    font-size: 14px;
+    color: #5f6368;
+    padding: 6px;
+    margin-left: 15px; /* recuo de 15px à esquerda */
+}
+
+.submenu li a:hover {
+    background-color: #f1f3f4;
+    color: #1a73e8;
+}
+
+/* Exibe submenu ao passar o mouse */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Caixa do formulário */
+
+.content { /* Centraliza a box */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #202124;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #4285f4;
+    outline: none;
+    box-shadow: 0 0 3px rgba(66,133,244,0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 5px;
+}
+
+/* Toast estilo Google */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #323232;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    animation: showToast 1s forwards, hideToast 1s forwards 10s; 
+    /* aparece em 1s, depois de 10s inicia animação para sumir */
+}
+
+/* Mensagem de Alerta */
+.mensagem {
+    position: fixed;       /* fixa na tela */
+    bottom: 20px;          /* distância da parte inferior */
+    right: 20px;           /* distância da lateral direita */
+    min-width: 250px;
+    margin-bottom: 0;      /* remove margem inferior */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    animation: showToast 0.5s ease forwards, hideToast 0.5s ease 4s forwards;
+    z-index: 9999;         /* garante que fica acima do conteúdo */
+}
+
+.mensagem:contains("Erro") {
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.mensagem:contains("Sucesso") {
+    background-color: #e6f4ea;
+    color: #188038;
+}
+
+/* Aparecer */
+@keyframes showToast {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Sumir */
+@keyframes hideToast {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
